@@ -11,3 +11,18 @@ NetFlowSession session = new NetFlowSession(source -> {
 NetFlowCollector collector = new NetFlowCollector(session);
 collector.join();
 ```
+
+## Maven
+```xml
+<repository>
+    <id>lumaserv</id>
+    <url>https://maven.lumaserv.cloud</url>
+</repository>
+```
+```xml
+<dependency>
+    <groupId>com.lumaserv</groupId>
+    <artifactId>netflow-java</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```

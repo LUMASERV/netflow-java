@@ -22,4 +22,33 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>lumaserv-snapshots</id>
+            <url>https://nexus.lumaserv.cloud/repository/lumaserv-snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>lumaserv-releases</id>
+            <url>https://nexus.lumaserv.cloud/repository/lumaserv-releases</url>
+        </repository>
+    </distributionManagement>
+
 </project>
